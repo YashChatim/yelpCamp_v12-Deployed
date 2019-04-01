@@ -1,0 +1,89 @@
+body {
+    background: black;
+}
+
+#landing-header {
+    z-index: 1; /* 3d plane in z-direction and value of 1 means coming towards us */
+    position: relative;
+    text-align: center;
+    padding-top: 35vh; /* Relative to the height of browser window size */
+}
+
+#landing-header h1 {
+    color: white;
+}
+
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 0; /* pushes images behind landing-header content */
+    list-style: none;
+}
+
+.slideshow li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0; /* faded out */
+    animation: imgAnim 50s linear infinite; /* animation lasts 50s, linear - animation speed is same throughout,  infinite - animation continues infinitely  */
+}
+
+.slideshow li:nth-child(1) {
+    background-image: url(https://wallpaperplay.com/walls/full/0/7/3/88557.jpg);
+}
+
+.slideshow li:nth-child(2) {
+    background-image: url(https://wallpapercave.com/wp/wp1857438.jpg);
+    animation-delay: 10s;
+}
+
+.slideshow li:nth-child(3) {
+    background-image: url(http://i.imgur.com/Cl1w0.jpg);
+    animation-delay: 20s;
+}
+
+.slideshow li:nth-child(4) {
+    background-image: url(https://www.martinstreamcampground.com/x/cdn/?https://storage.googleapis.com/wzukusers/user-31620049/images/5a5e7b39f419dAuNBGab/120516.jpg);
+    animation-delay: 30s;
+}
+
+.slideshow li:nth-child(5) {
+    background-image: url(https://nomadsworld.com/wp-content/uploads/2017/12/new-zealand-landscape-pixabay.jpg);
+    animation-delay: 40s;
+}
+
+@keyframes imgAnim {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in; /* animation-timing-function - gives smooth transition */
+    }
+    
+    10% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+    
+    20% {
+        opacity: 1;
+    }
+    
+    30% {
+        opacity: 0;
+    }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
