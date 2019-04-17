@@ -17,7 +17,7 @@ router.get("/", (req, res) => { // replace function with => arrow function in es
 
 // Sign-up form
 router.get("/register", (req, res) => {
-    res.render("register.ejs");
+    res.render("register.ejs", {page: 'register'});
 });
 
 
@@ -41,7 +41,7 @@ router.post("/register", (req, res) => {
 
 // Login form
 router.get("/login", (req, res) => {
-    res.render("login.ejs");
+    res.render("login.ejs", {page: 'login'});
 });
 
 
