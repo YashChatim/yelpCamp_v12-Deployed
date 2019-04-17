@@ -1,4 +1,3 @@
-require('dotenv').config(); // module that loads environment variables from a .env file into process.env
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
