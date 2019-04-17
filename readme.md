@@ -141,6 +141,12 @@
 - Refactored middleware
 -->
 
+<!--
+- Styled login and sign-up form
+- Updated navbar menu
+- Fixed registration flash message bugs
+-->
+
 
 
 
