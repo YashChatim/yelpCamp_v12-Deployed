@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
             console.log(err);
         }
         else {
-            res.render("campgrounds/index.ejs", {campgrounds: allCampgrounds}); // {campgrounds: allCampgrounds} the contents of allCampgrounds is sent to campgrounds which is furthur used in index.ejs
+            res.render("campgrounds/index.ejs", {campgrounds: allCampgrounds, page: 'campgrounds'}); // {campgrounds: allCampgrounds} the contents of allCampgrounds is sent to campgrounds which is furthur used in index.ejs
         }
     });
 });
