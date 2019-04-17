@@ -26,7 +26,8 @@ router.post("/register", (req, res) => {
     var newUser = new User({username: req.body.username}); // new User - we only pass username and save it in database
     User.register(newUser, req.body.password, (err, user) => { // re.body.password - password is saved as hash in database
         if(err) {
-            return res.render("register.ejs", {"error": err.message});
+            console.log(err);
+            return res.render("register.ejs", {error: err.message});
         }
         // else
         passport.authenticate("local")(req, res, function() { // passport.authenticate - logs user in,= and takes care of everthing in session
