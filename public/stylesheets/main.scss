@@ -1,0 +1,27 @@
+body {
+    background: lightblue;
+}
+
+.row {
+    padding: 0;
+}
+
+.thumbnail {
+    img {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .caption_full {
+        padding: 10px;
+    }
+    
+    .caption h3 {
+    font-size: 20px;
+    }
+}
+
+.delete-form {
+    display: inline;
+}
+
