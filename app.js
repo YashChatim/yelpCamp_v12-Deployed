@@ -22,8 +22,8 @@ var commentRoutes = require("./routes/comments.js");
 
 var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v12" // process.env.DATABASEURL - environmental variable for database
 
-mongoose.connect(url, { useNewUrlParser: true }); 
-// mongoose.connect("mongodb+srv://yash:poke0796@yelpcamp-nakbs.mongodb.net/test?retryWrites=true", { useNewUrlParser: true }); // connected to mongoLab database
+//mongoose.connect(url, { useNewUrlParser: true }); 
+mongoose.connect("mongodb+srv://yash:poke0796@yelpcamp-nakbs.mongodb.net/test?retryWrites=true", { useNewUrlParser: true }); // connected to mongoLab database
 app.use(bodyParser.urlencoded({extended: true})); // handles HTTP POST request
 app.use(express.static(__dirname + "/public")); // __dirname - directory where script was run
 app.use(methodOverride("_method")); // method-override listens for _method
